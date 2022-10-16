@@ -24,7 +24,22 @@ varTimeId = ["#nineAm", "#tenAm", "#elevenAm", "#twelvePm", "#onePm", "#twoPm", 
 varLS = [nineAm, tenAm, elevenAm, twelvePm, onePm,  twoPm, threePm, fourPm, fivePm];
 arrayPos = 0;
 
+//save button for local storage
 $(".saveBtn").on("click", function (event) {
   var schedulerItem = event.target.parentElement.previousElementSibling.children[0].value;
   localStorage.setItem(event.target.attributes[0].value, schedulerItem);
+});
+
+//detemines which block the text input saves to using ids
+$(document).ready(function () {
+  for (let i = 0; i < timeArray.length; i++) {
+      if (localStorage[timeArray[arrayPos]] !== null && localStorage[timeArray[arrayPos]] !== undefined) {
+          varLS[arrayPos] = $("<p>" + localStorage[timeArray[arrayPos]] + "</p>");
+          $(varTimeId[arrayPos]).append((varLS[arrayPos])[0].innerText);
+          arrayPos++;
+        } else {
+          ("");
+          arrayPos++;
+        }        
+    }
 });
