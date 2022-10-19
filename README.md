@@ -26,9 +26,9 @@ the save button for it to be stored to local storage. The hour blocks will be co
 
 Example images are listed below:
 
-![Home Page](assets/images/image1.jpg)
-![Adding an event](assets/images/image2.jpg)
-![Saving an event](assets/images/image3.jpg)
+![Home Page](Assets/images/image1.jpg)
+![Adding an event](Assets/images/image2.jpg)
+![Saving an event](Assets/images/image3.jpg)
 
 ## Credits
 
